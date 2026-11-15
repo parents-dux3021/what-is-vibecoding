@@ -7,10 +7,13 @@
   const fullscreenBtn = document.getElementById('fullscreenBtn');
   const notesBtn = document.getElementById('notesBtn');
   const viewport = document.getElementById('slidesViewport');
+  const controlsBar = document.querySelector('.controls-bar');
 
   let currentIndex = 0;
   const totalSlides = slides.length;
   let notesWindow = null;
+  let hideControlsTimer = null;
+  let isHoveringControls = false;
 
   /* 발표자 메모 팝업 업데이트 */
   function updateNotes() {
@@ -205,8 +208,64 @@
     if (!document.fullscreenElement) {
       fullscreenBtn.textContent = '전체 화면';
     }
+    showControls();
   });
 
-  // 초기 렌더링
+  /* 하단 조작 바 자동 숨김 및 표시 */
+  function showControls() {
+    if (!controlsBar) return;
+    controlsBar.classList.remove('is-hidden');
+    resetHideControlsTimer();
+  }
+
+  function hideControls() {
+    if (!controlsBar || isHoveringControls) return;
+    controlsBar.classList.add('is-hidden');
+  }
+
+  function resetHideControlsTimer() {
+    clearTimeout(hideControlsTimer);
+    hideControlsTimer = setTimeout(() => {
+      hideControls();
+    }, 2500);
+  }
+
+  // 마우스 움직임, 터치 시 조작 바 표시
+  document.addEventListener('mousemove', (event) => {
+    showControls();
+    // 마우스가 화면 하단(80px 이내)에 머무는 동안에는 숨김 타이머 정지
+    if (window.innerHeight - event.clientY <= 80) {
+      clearTimeout(hideControlsTimer);
+    }
+  });
+
+  document.addEventListener('touchstart', showControls, { passive: true });
+
+  // 조작 바 위에 마우스가 머물 때는 숨기지 않음
+  if (controlsBar) {
+    controlsBar.addEventListener('mouseenter', () => {
+      isHoveringControls = true;
+      clearTimeout(hideControlsTimer);
+      controlsBar.classList.remove('is-hidden');
+    });
+
+    controlsBar.addEventListener('mouseleave', () => {
+      isHoveringControls = false;
+      resetHideControlsTimer();
+    });
+
+    controlsBar.addEventListener('focusin', () => {
+      isHoveringControls = true;
+      showControls();
+    });
+
+    controlsBar.addEventListener('focusout', () => {
+      isHoveringControls = false;
+      resetHideControlsTimer();
+    });
+  }
+
+  // 초기 렌더링 및 2.5초 후 자동 숨김
   renderSlide(0);
+  resetHideControlsTimer();
 })();
