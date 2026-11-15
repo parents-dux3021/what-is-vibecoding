@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>바이브코딩(Vibe Coding) 완전 정복</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="deck-shell">
+    <!-- 상단 무지개 파스텔 진행 막대 -->
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- 슬라이드 본문 영역 -->
+    <main class="slides-viewport" id="slidesViewport">
+
+      <!-- 슬라이드 1: 표지 & 오늘 볼 핵심 4가지 -->
+      <section class="slide slide-cover is-active" aria-label="슬라이드 1" data-notes="안녕하세요! 오늘은 누구나 말로 쉽게 프로그램을 만드는 새로운 흐름, '바이브코딩'에 대해 핵심만 쏙쏙 짚어 살펴보겠습니다.">
+        <div class="slide-inner split-layout cover-split">
+          <div class="split-content">
+            <div class="pill-tag coral mb-1">✨ 시니어 AI 엔지니어 관점 · 2026년 11월 14일</div>
+            <h1 class="cover-title">바이브코딩<span class="title-sub">(Vibe Coding)</span> 완전 정복</h1>
+            <p class="cover-subtitle">말로 앱과 웹사이트를 만드는 새로운 시대 🎈</p>
+
+            <div class="agenda-box">
+              <h2 class="agenda-heading">💡 오늘 함께 볼 핵심 4가지</h2>
+              <div class="agenda-grid">
+                <div class="agenda-item">
+                  <span class="agenda-num num-coral">01</span>
+                  <div>
+                    <strong>개념</strong>
+                    <p>바이브코딩이란 무엇이고, 예전과 무엇이 다를까?</p>
+                  </div>
+                </div>
+                <div class="agenda-item">
+                  <span class="agenda-num num-yellow">02</span>
+                  <div>
+                    <strong>역사</strong>
+                    <p>언제 시작되어 지금의 모습으로 발전했을까?</p>
+                  </div>
+                </div>
+                <div class="agenda-item">
+                  <span class="agenda-num num-mint">03</span>
+                  <div>
+                    <strong>실전</strong>
+                    <p>어떻게 시작하고, 어떤 도구를 쓰면 좋을까?</p>
+                  </div>
+                </div>
+                <div class="agenda-item">
+                  <span class="agenda-num num-sky">04</span>
+                  <div>
+                    <strong>전망</strong>
+                    <p>무엇을 만들 수 있고, 어떤 점을 주의해야 할까?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-media">
+            <img src="images/slide-01-cover.jpg" alt="말로 아이디어를 설명하면 앱과 웹사이트가 만들어지는 클레이 아트 일러스트" class="slide-art" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 2: 바이브코딩이란? (비유와 비교) -->
+      <section class="slide" aria-label="슬라이드 2" data-notes="바이브코딩은 코딩 용어를 몰라도 일상적인 우리말로 설명하면 AI가 만들어주는 방식입니다. 칼질을 배우는 대신 실력 좋은 요리사에게 주문하는 것과 같습니다.">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="pill-tag coral">01. 개념</span>
+            <h2>바이브코딩이란? (비유와 비교)</h2>
+          </div>
+
+          <blockquote class="hero-quote">
+            “복잡한 컴퓨터 글자를 배우지 않고, AI에게 일상적인 말로 설명해 결과물을 만드는 방식”
+          </blockquote>
+
+          <div class="split-layout media-right-sm">
+            <div class="split-content">
+              <div class="analogy-banner">
+                <span class="analogy-icon">🍳</span>
+                <p>
+                  <strong>요리사 비유:</strong> 칼질부터 직접 배워 요리하는 대신, 실력 있는 요리사(AI)에게 말로 주문하고 맛을 보며 수정을 부탁하는 것과 같습니다.
+                </p>
+              </div>
+
+              <div class="table-wrap">
+                <table class="compare-table">
+                  <thead>
+                    <tr>
+                      <th>구분</th>
+                      <th class="old-way-col">예전 방식 ✍️</th>
+                      <th class="highlight-col">바이브코딩 🚀</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>필요한 준비</strong></td>
+                      <td>컴퓨터 언어를 오래 배워야 함</td>
+                      <td class="highlight-col">만들고 싶은 아이디어와 일상적인 말</td>
+                    </tr>
+                    <tr>
+                      <td><strong>만드는 방법</strong></td>
+                      <td>사람이 한 줄씩 직접 입력함</td>
+                      <td class="highlight-col">AI에게 말로 시키고 결과를 확인함</td>
+                    </tr>
+                    <tr>
+                      <td><strong>고치는 방법</strong></td>
+                      <td>틀린 글자를 사람이 직접 찾아 고침</td>
+                      <td class="highlight-col">이상한 점을 말로 알려 주면 AI가 고침</td>
+                    </tr>
+                    <tr>
+                      <td><strong>사람의 역할</strong></td>
+                      <td>직접 만드는 작업자</td>
+                      <td class="highlight-col">방향을 정하고 결과를 확인하는 <strong>총괄 감독관</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="split-media">
+              <img src="images/slide-02-chef.jpg" alt="손님이 AI 요리사에게 말로 주문하는 클레이 아트 일러스트" class="slide-art" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 3: 탄생 배경과 결정적 순간 -->
+      <section class="slide" aria-label="슬라이드 3" data-notes="2025년 2월 2일, 안드레이 카파시가 바이브코딩이라는 말을 처음 썼습니다. 키보드 대신 마이크로 말하고, AI의 제안을 편하게 수락하는 새로운 흐름이 시작되었습니다.">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="pill-tag yellow">02. 역사</span>
+            <h2>탄생 배경과 결정적 순간 (2025년 2월 2일)</h2>
+          </div>
+
+          <div class="two-col">
+            <div class="card fun-card-tilt">
+              <span class="card-pill mint">도약의 배경 🌱</span>
+              <h3 class="card-title">왜 2025년 초에 등장했을까?</h3>
+              <ul class="clean-list">
+                <li>
+                  <strong>🤖 AI 실력의 도약</strong>
+                  <span>짧은 질문에 답하던 수준을 넘어, 긴 설명을 알아듣고 여러 화면과 파일을 한꺼번에 만드는 수준으로 성장했습니다.</span>
+                </li>
+                <li>
+                  <strong>🎙️ 말하는 도구의 발전</strong>
+                  <span>목소리를 글자로 옮겨 주는 도구도 발전해, 키보드를 거의 치지 않고 입으로 말만 해도 완성되는 환경이 열렸습니다.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card card-accent fun-card-tilt">
+              <span class="card-pill coral">결정적 순간 🔥</span>
+              <h3 class="card-title">안드레이 카파시의 제안 (2025.02.02)</h3>
+              <p class="card-lead">
+                오픈AI 공동 창업자였던 연구자 <strong>안드레이 카파시</strong>가 소셜 미디어(X)에 처음 <strong>‘바이브코딩’</strong>이라는 말을 썼습니다.
+              </p>
+              <ul class="clean-list compact">
+                <li><span class="list-bullet bullet-coral">1</span><strong>말로 시키기:</strong> 키보드 대신 마이크로 말하며 설명</li>
+                <li><span class="list-bullet bullet-yellow">2</span><strong>바로 받아들이기:</strong> AI가 고쳐 준 내용을 무조건 ‘수락’</li>
+                <li><span class="list-bullet bullet-mint">3</span><strong>그대로 붙여 넣기:</strong> 오류 문구만 복사해 AI에게 전달해 수정</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 4: 폭발적 확산과 발전 3단계 -->
+      <section class="slide" aria-label="슬라이드 4" data-notes="바이브코딩은 영국 콜린스 사전 올해의 단어로 선정될 만큼 빠르게 퍼졌습니다. 유행기를 지나 시행착오를 겪고, 지금은 꼼꼼히 확인하는 성숙기로 진화했습니다.">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="pill-tag yellow">02. 역사</span>
+            <h2>폭발적 확산과 발전 3단계 (2025 ~ 2026)</h2>
+          </div>
+
+          <div class="highlight-strip">
+            <span class="strip-emoji">📚</span>
+            <div>
+              <strong>왜 이렇게 빠르게 퍼졌을까?</strong>
+              <p>이미 많은 사람이 쓰던 방식에 딱 맞는 이름이 붙자 순식간에 퍼졌고, 신생 창업 기업들도 AI로 서비스를 만들기 시작했습니다. 2025년 말에는 영국 <strong>콜린스 영어사전</strong>이 ‘바이브코딩’을 <strong>올해의 단어</strong>로 선정했습니다.</p>
+            </div>
+          </div>
+
+          <div class="steps-row three-cols">
+            <div class="step-card fun-card-tilt">
+              <span class="step-badge badge-coral">1단계 · 2025년 초</span>
+              <h3>말로 뚝딱 만드는 유행</h3>
+              <p>“일단 돌아가면 된다”는 가벼운 분위기로 빠르게 확산되었습니다.</p>
+            </div>
+            <div class="step-card fun-card-tilt">
+              <span class="step-badge badge-yellow">2단계 · 2025년 중후반</span>
+              <h3>대중화와 시행착오</h3>
+              <p>누구나 앱을 만들었지만, 확인 없이 쓰다 <strong>개인정보 유출·수정 어려움</strong> 같은 안전 문제가 생겼습니다.</p>
+            </div>
+            <div class="step-card step-card-active fun-card-tilt">
+              <span class="step-badge badge-mint">3단계 · 2026년 현재</span>
+              <h3>꼼꼼히 확인하는 성숙기</h3>
+              <p>사람이 <strong>총괄 주방장</strong>처럼 기준을 정하고, AI의 결과를 꼼꼼히 검사하는 방식으로 정착했습니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 5: 어떻게 시작할까? -->
+      <section class="slide" aria-label="슬라이드 5" data-notes="처음 시작할 때는 딱 3가지만 기억하세요. 작은 목표부터 잡고, 편하게 말로 설명한 다음, 직접 눌러보며 고쳐나가는 것입니다.">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="pill-tag mint">03. 실전</span>
+            <h2>어떻게 시작할까? (진행 순서 3단계)</h2>
+          </div>
+
+          <div class="steps-row three-cols big-steps">
+            <div class="step-card fun-card-tilt">
+              <div class="big-num num-coral">1</div>
+              <h3>작은 목표 정하기</h3>
+              <p>처음에는 <em>“할 일을 적는 간단한 메모장”</em>처럼 작고 단순한 것부터 시작합니다.</p>
+            </div>
+            <div class="step-card fun-card-tilt">
+              <div class="big-num num-yellow">2</div>
+              <h3>말로 구체적으로 설명하기</h3>
+              <p><em>“깔끔한 흰색 화면에 글 적는 칸과 ‘추가’ 버튼을 만들어 줘”</em>처럼 편하게 부탁합니다.</p>
+            </div>
+            <div class="step-card fun-card-tilt">
+              <div class="big-num num-mint">3</div>
+              <h3>직접 눌러 보고 다듬기</h3>
+              <p>완성된 화면을 직접 써 본 뒤, 마음에 안 드는 부분을 말로 계속 고쳐 나갑니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 6: 목적에 따라 고르는 주요 도구 -->
+      <section class="slide" aria-label="슬라이드 6" data-notes="상황에 따라 도구를 골라 쓰면 됩니다. 설치 없이 바로 쓰고 싶다면 러버블이나 볼트, 디자인 중심이라면 v0, 이미 친숙한 챗봇이 있다면 챗GPT나 제미나이를 써보세요.">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="pill-tag mint">03. 실전</span>
+            <h2>목적에 따라 고르는 주요 도구</h2>
+          </div>
+
+          <div class="tools-grid">
+            <div class="tool-card fun-card-tilt">
+              <span class="tool-cat cat-coral">🌐 설치 없이 인터넷 창에서 바로</span>
+              <h3>러버블(Lovable) · 볼트(Bolt.new) · 레플릿(Replit)</h3>
+              <p>복잡한 설치 없이 웹사이트에 들어가 말만 걸면, 제작부터 인터넷 공개까지 한 번에 해결해 줍니다.</p>
+            </div>
+            <div class="tool-card fun-card-tilt">
+              <span class="tool-cat cat-mint">🎨 깔끔한 화면 디자인 먼저 보기</span>
+              <h3>v0 (브이제로)</h3>
+              <p>원하는 화면을 말로 적으면 보기 좋고 세련된 화면을 빠르게 그려 줍니다.</p>
+            </div>
+            <div class="tool-card fun-card-tilt">
+              <span class="tool-cat cat-sky">💬 평소 쓰던 AI로 가볍게 맛보기</span>
+              <h3>제미나이(Gemini) · 챗GPT(ChatGPT) · 클로드(Claude)</h3>
+              <p>새 서비스에 가입하지 않고도 대화창 옆에 바로 눌러 볼 수 있는 작은 결과물을 띄워 줍니다.</p>
+            </div>
+            <div class="tool-card fun-card-tilt">
+              <span class="tool-cat cat-lavender">💻 조금 더 세밀하게 직접 다듬기</span>
+              <h3>커서(Cursor) · 윈드서프(Windsurf)</h3>
+              <p>컴퓨터에 설치해 쓰는 도구로, 더 크고 복잡한 서비스를 세밀하게 관리할 때 좋습니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 7: 무엇을 만들 수 있을까? -->
+      <section class="slide" aria-label="슬라이드 7" data-notes="일상 생활에서 필요한 가계부, 모바일 초대장, 나만의 계산기 같은 작은 도구들을 반나절 만에 뚝딱 만드는 데 바이브코딩이 가장 잘 어울립니다.">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="pill-tag sky">04. 활용</span>
+            <h2>무엇을 만들 수 있을까? (잘 맞는 활용 예시)</h2>
+          </div>
+
+          <div class="split-layout media-right-sm">
+            <div class="split-content">
+              <div class="tools-grid">
+                <div class="tool-card fun-card-tilt card-pastel-pink">
+                  <span class="tool-cat cat-coral">🗓️ 일상 생활 도구</span>
+                  <h3>나만의 편리한 도구</h3>
+                  <p>나만의 가계부, 오늘 할 일 목록, 점심 메뉴 고르기 룰렛</p>
+                </div>
+                <div class="tool-card fun-card-tilt card-pastel-yellow">
+                  <span class="tool-cat cat-yellow">💌 모임·홍보용 페이지</span>
+                  <h3>공유와 안내 화면</h3>
+                  <p>모바일 초대장, 여행 일정 공유 페이지, 온라인 명함</p>
+                </div>
+                <div class="tool-card fun-card-tilt card-pastel-mint">
+                  <span class="tool-cat cat-mint">📖 학습·업무 도우미</span>
+                  <h3>효율을 높이는 도우미</h3>
+                  <p>영어 단어 암기 퀴즈, 나만의 전용 계산기</p>
+                </div>
+                <div class="tool-card fun-card-tilt card-pastel-sky">
+                  <span class="tool-cat cat-sky">🎮 가벼운 놀이</span>
+                  <h3>즐기는 작은 콘텐츠</h3>
+                  <p>간단한 심리·성향 테스트, 숫자 맞히기 미니 게임</p>
+                </div>
+              </div>
+
+              <div class="bottom-callout">
+                ⭐ “이런 게 있으면 참 편할 텐데” 싶은 <strong>나만의 작은 도구</strong>를 뚝딱 만드는 데 최고의 방법입니다!
+              </div>
+            </div>
+
+            <div class="split-media">
+              <img src="images/slide-07-examples.jpg" alt="가계부, 초대장, 할 일 목록, 퀴즈 게임 화면을 표현한 클레이 아트 일러스트" class="slide-art" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 8: 어디에 한계가 있을까? -->
+      <section class="slide" aria-label="슬라이드 8" data-notes="주의할 점도 있습니다. 돈이나 개인정보가 걸린 서비스, 또는 너무 복잡하고 큰 프로그램은 AI에게만 전적으로 맡기면 위험합니다.">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="pill-tag coral">04. 한계</span>
+            <h2>어디에 한계가 있을까? (주의해야 할 영역)</h2>
+          </div>
+
+          <div class="two-col">
+            <div class="card card-warn fun-card-tilt">
+              <div class="warn-icon">🔒</div>
+              <h3 class="card-title">보안과 돈이 걸린 대형 서비스</h3>
+              <p class="card-desc">
+                은행 앱, 결제 시스템, 많은 사람의 개인정보를 다루는 서비스는 AI에게만 맡기면 매우 위험합니다.
+              </p>
+              <div class="warn-pill">⚠️ 반드시 전문가의 꼼꼼한 검증이 필요합니다.</div>
+            </div>
+
+            <div class="card card-warn fun-card-tilt">
+              <div class="warn-icon">🧩</div>
+              <h3 class="card-title">크고 복잡한 장기 프로젝트</h3>
+              <p class="card-desc">
+                기능이 계속 늘어나고 여러 사람이 함께 관리해야 하는 큰 서비스는, AI가 만든 내용을 사람이 이해하지 못하면 나중에 고치기 어려워집니다.
+              </p>
+              <div class="warn-pill">🧭 규모가 커질수록 사람이 구조를 파악하고 있어야 합니다.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 9: 시니어 AI 엔지니어의 실전 3원칙 -->
+      <section class="slide" aria-label="슬라이드 9" data-notes="성공적인 바이브코딩을 위한 3원칙입니다. 한 번에 하나씩 시키고, 화면에 보이는 오류를 솔직하게 말해주며, 쓰기 전에 꼭 직접 눌러보세요.">
+        <div class="slide-inner">
+          <div class="slide-header">
+            <span class="pill-tag lavender">05. 조언</span>
+            <h2>시니어 AI 엔지니어의 실전 3원칙</h2>
+          </div>
+
+          <div class="principles-list">
+            <div class="principle-item fun-card-tilt">
+              <span class="principle-num num-coral">01</span>
+              <div>
+                <h3>한 번에 하나씩 시키세요 🎯</h3>
+                <p>기본 뼈대를 먼저 만들고, 필요한 기능을 하나씩 덧붙이는 것이 훨씬 빠르고 정확합니다.</p>
+              </div>
+            </div>
+            <div class="principle-item fun-card-tilt">
+              <span class="principle-num num-yellow">02</span>
+              <div>
+                <h3>보이는 현상을 그대로 말해 주세요 🗣️</h3>
+                <p>“‘추가’ 버튼을 눌렀는데 반응이 없어. 고쳐 줘.”처럼 눈앞의 상황만 알려 주면 AI가 원인을 찾아 고칩니다.</p>
+              </div>
+            </div>
+            <div class="principle-item fun-card-tilt">
+              <span class="principle-num num-mint">03</span>
+              <div>
+                <h3>실제로 쓰기 전에 꼭 직접 확인하세요 🔍</h3>
+                <p>AI도 가끔 엉뚱한 실수를 합니다. 남에게 공개하기 전에 모든 버튼을 직접 눌러 보고 확인해야 합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 슬라이드 10: 앞으로의 전망 & 마무리 -->
+      <section class="slide slide-closing" aria-label="슬라이드 10" data-notes="기술을 몰라도 상상력을 펼칠 수 있는 시대가 되었습니다. 중요한 것은 사람들에게 필요한 것을 생각하는 기획력과 확인하는 눈입니다. 감사합니다!">
+        <div class="slide-inner split-layout media-right-sm">
+          <div class="split-content closing-left">
+            <div class="pill-tag lavender mb-1">05. 전망</div>
+            <h2 class="closing-title">앞으로의 전망과 마무리 🌈</h2>
+
+            <blockquote class="hero-quote">
+              “만드는 기술을 몰라도 아이디어를 현실로 꺼낼 수 있는 시대”
+            </blockquote>
+
+            <div class="future-grid">
+              <div class="future-card fun-card-tilt">
+                <span class="future-label cat-coral">핵심 역량 01</span>
+                <h3>기획력 💡</h3>
+                <p>사람들이 진짜 필요로 하는 것이 무엇인지 떠올리는 힘</p>
+              </div>
+              <div class="future-card fun-card-tilt">
+                <span class="future-label cat-mint">핵심 역량 02</span>
+                <h3>확인하는 눈 👁️</h3>
+                <p>AI가 만든 결과를 꼼꼼히 따져 보고 다듬는 힘</p>
+              </div>
+            </div>
+
+            <div class="closing-footer">
+              <h3>감사합니다! 🎉</h3>
+              <p>직접 만들어 보고 싶은 작은 아이디어가 있다면 오늘 바로 가볍게 시작해 보세요.</p>
+            </div>
+          </div>
+
+          <div class="split-media">
+            <img src="images/slide-10-future.jpg" alt="사람과 AI가 함께 화면을 보며 아이디어를 완성하는 클레이 아트 일러스트" class="slide-art" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 하단 조작 바 -->
+    <footer class="controls-bar">
+      <div class="controls-left">
+        <span class="deck-name">🎨 바이브코딩 발표 자료</span>
+        <div class="keyboard-hints">
+          <kbd>←</kbd> <kbd>→</kbd> 이동
+          <kbd>Space</kbd> 다음
+          <kbd>F</kbd> 전체화면
+          <kbd>S</kbd> 발표자노트
+        </div>
+      </div>
+      <div class="controls-center">
+        <button type="button" class="nav-btn" id="prevBtn" aria-label="이전 슬라이드">← 이전</button>
+        <span class="page-indicator" id="pageIndicator">1 / 10</span>
+        <button type="button" class="nav-btn" id="nextBtn" aria-label="다음 슬라이드">다음 →</button>
+      </div>
+      <div class="controls-right">
+        <button type="button" class="nav-btn btn-secondary" id="notesBtn" aria-label="발표자 메모 열기">📝 발표자 메모</button>
+        <button type="button" class="nav-btn btn-secondary" id="fullscreenBtn" aria-label="전체 화면 전환">전체 화면</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
